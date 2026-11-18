@@ -1,0 +1,42 @@
+name: Publish to Instagram
+
+on:
+  schedule:
+    - cron: "0,30 * * * *"   # every 30 minutes; posts go out once their time has passed
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "check = test the token only, run = publish anything due"
+        default: "check"
+        type: choice
+        options: [check, run]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Publish due posts
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: "17841457730706944"
+        run: python publish.py ${{ github.event.inputs.mode || 'run' }}
+      - name: Save queue status
+        if: always()
+        run: |
+          if ! git diff --quiet queue.json; then
+            git config user.name "penorga-bot"
+            git config user.email "penorga-bot@users.noreply.github.com"
+            git commit -am "Update post status"
+            git push
+          fi
