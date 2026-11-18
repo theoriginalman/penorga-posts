@@ -6,10 +6,10 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "check = test the token only, run = publish anything due"
+        description: "check = test the token, test = upload everything queued without publishing, run = publish anything due"
         default: "check"
         type: choice
-        options: [check, run]
+        options: [check, test, run]
 
 permissions:
   contents: write

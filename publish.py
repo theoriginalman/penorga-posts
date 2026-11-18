@@ -54,7 +54,8 @@ def wait_until_ready(container_id, label):
     raise RuntimeError(f"{label}: media still processing after 10 minutes")
 
 
-def publish(item):
+def prepare(item):
+    """Upload the media to Instagram and wait until it is ready. Returns the container id (nothing is posted yet)."""
     path = os.path.join("media", item["file"])
     caption = item.get("caption", "")
     if item["file"].lower().endswith((".mp4", ".mov")):
@@ -73,6 +74,11 @@ def publish(item):
         c = call("POST", f"{USER_ID}/media", {"image_url": image_url, "caption": caption})
         cid = c["id"]
     wait_until_ready(cid, item["file"])
+    return cid
+
+
+def publish(item):
+    cid = prepare(item)
     res = call("POST", f"{USER_ID}/media_publish", {"creation_id": cid})
     return res["id"]
 
@@ -83,6 +89,22 @@ def main():
         me = call("GET", USER_ID, {"fields": "username"})
         print(f"Token works. Connected to Instagram account: @{me.get('username')}")
         return
+    if mode == "test":
+        # Upload every queued file Instagram-side WITHOUT publishing, to catch problems early.
+        with open(QUEUE) as f:
+            queue = json.load(f)
+        bad = 0
+        for item in queue:
+            if item.get("status") in ("posted", "failed"):
+                continue
+            try:
+                prepare(item)
+                print(f"OK   {item['file']}")
+            except Exception as e:
+                bad += 1
+                print(f"FAIL {item['file']}: {e}")
+        print("Nothing was published.")
+        sys.exit(1 if bad else 0)
 
     with open(QUEUE) as f:
         queue = json.load(f)
