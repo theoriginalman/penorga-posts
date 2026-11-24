@@ -46,7 +46,9 @@
     "file": "maupassant-memory.jpg",
     "figma_id": "296:28254",
     "post_at": "2026-11-24T19:30",
-    "caption": "\"Our memory is a more perfect world than the universe: it gives back life to those who no longer exist.\"\nGuy de Maupassant\n\nSome people live on in the stories we keep telling.\n\nFollow @penorga for more.\n\n#quotes #memories #literaryquotes #bookstagram #classicliterature"
+    "caption": "\"Our memory is a more perfect world than the universe: it gives back life to those who no longer exist.\"\nGuy de Maupassant\n\nSome people live on in the stories we keep telling.\n\nFollow @penorga for more.\n\n#quotes #memories #literaryquotes #bookstagram #classicliterature",
+    "status": "failed",
+    "error": "POST 17841457730706944/media failed (400): {\"error\":{\"message\":\"API access blocked.\",\"code\":200,\"type\":\"OAuthException\",\"error_subcode\":5258005,\"fbtrace_id\":\"AXrLjEdqt1-7Zr24kSz7xQu\"}}"
   },
   {
     "file": "solzhenitsyn-good-and-evil.jpg",
