@@ -38,7 +38,9 @@
     "file": "nabokov-imagination-flies.jpg",
     "figma_id": "296:28098",
     "post_at": "2026-11-23T19:30",
-    "caption": "\"Our imagination flies. We are its shadow on the earth.\"\nVladimir Nabokov\n\nLet it fly today.\n\nFollow @penorga for more.\n\n#nabokov #quotes #imagination #writersofinstagram #literaryquotes"
+    "caption": "\"Our imagination flies. We are its shadow on the earth.\"\nVladimir Nabokov\n\nLet it fly today.\n\nFollow @penorga for more.\n\n#nabokov #quotes #imagination #writersofinstagram #literaryquotes",
+    "status": "failed",
+    "error": "POST 17841457730706944/media failed (400): {\"error\":{\"message\":\"API access blocked.\",\"code\":200,\"type\":\"OAuthException\",\"error_subcode\":5258005,\"fbtrace_id\":\"AGXacNfAFwtP7qbk9suRMjQ\"}}"
   },
   {
     "file": "maupassant-memory.jpg",
