@@ -54,7 +54,9 @@
     "file": "solzhenitsyn-good-and-evil.jpg",
     "figma_id": "783:3483",
     "post_at": "2026-11-25T19:30",
-    "caption": "\"The line dividing good and evil cuts through the heart of every human being.\"\nAleksandr Solzhenitsyn\n\nNot between us and them. Within each of us.\n\nFollow @penorga for more.\n\n#quotes #literaryquotes #philosophy #bookstagram #classicliterature"
+    "caption": "\"The line dividing good and evil cuts through the heart of every human being.\"\nAleksandr Solzhenitsyn\n\nNot between us and them. Within each of us.\n\nFollow @penorga for more.\n\n#quotes #literaryquotes #philosophy #bookstagram #classicliterature",
+    "status": "failed",
+    "error": "POST 17841457730706944/media failed (400): {\"error\":{\"message\":\"API access blocked.\",\"code\":200,\"type\":\"OAuthException\",\"error_subcode\":5258005,\"fbtrace_id\":\"AzvTFo5zW7WvZUQ0HZGJGuY\"}}"
   },
   {
     "file": "neruda-love-short.jpg",
