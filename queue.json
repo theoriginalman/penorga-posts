@@ -70,7 +70,9 @@
     "file": "marquez-something-left-to-love.jpg",
     "figma_id": "392:15282",
     "post_at": "2026-11-27T19:30",
-    "caption": "\"There is always something left to love.\"\nGabriel García Márquez\n\nEven on the hard days. Especially then.\n\nFollow @penorga for more.\n\n#gabrielgarciamarquez #quotes #bookstagram #literaryquotes #hope"
+    "caption": "\"There is always something left to love.\"\nGabriel García Márquez\n\nEven on the hard days. Especially then.\n\nFollow @penorga for more.\n\n#gabrielgarciamarquez #quotes #bookstagram #literaryquotes #hope",
+    "status": "failed",
+    "error": "POST 17841457730706944/media failed (400): {\"error\":{\"message\":\"API access blocked.\",\"code\":200,\"type\":\"OAuthException\",\"error_subcode\":5258005,\"fbtrace_id\":\"A2VT4s7MNmGtzTFGaH-zGfe\"}}"
   },
   {
     "file": "krishnamurti-virtue.jpg",
